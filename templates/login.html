@@ -21,7 +21,18 @@
             </div>
         </div>
     </header>
+    <ul class="d-flex flex-row align-items-start justify-content-start">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
+        {% if user.is_authenticated %}
+        <li>Hello, {{user.username}}</li>
+        <li><a href="accounts/logout">Logout</a></li>
+        {% else %}	
+        <li><a href="accounts/register">Register</a></li>
+        <li><a href="accounts/login">Login</a></li>
+        {% endif %}
+    </ul>
     <section style="height: 560px; background-color:#2c6e59" id="particles-js">
 
         
@@ -43,7 +54,7 @@
                         <a href="#" class="social" id="social"><i class="fab fa-google"></i></a>
                     </div>
                     <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" name= "name" id = "name" required>
+                    <input type="text" placeholder="Username" name= "username" id = "name" required>
                     <input type="email" placeholder="Email" name= "email" id="email" required>
                     <input type="password" placeholder="Password" name ="password" id="pass" required>
                     <button type="submit" id="register">Sign Up</button>
@@ -53,16 +64,18 @@
             <!-- SignIn Form -->
     
             <div class="form-container sign-in-container">
-                <form action="" class="form-signin" method="POST">
+                <form action="login" class="form-signin" method="POST">
+                    {% csrf_token %}   
                     <h1>Sign In With</h1>
                     <div class="social-container">
                         <img src="{%static 'Images/facebook2.png' %}" alt="" style="width: 50px ; height:50px;">
 
                         <img src="{%static 'Images/google.png' %}" alt="" style="width: 50px ; height:50px;">
+    
                     </div>
                     <span>or use your account</span>
-                    <input type="email" placeholder="Email" id ="e-mail" required>
-                    <input type="password" placeholder="Password" id="password" required>
+                    <input type="email" placeholder="Email" username="email"id ="e-mail" required>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
                     <a href="#" id="forget-link">Forgot your password?</a>
                     <button type="submit" id="login" onclick="direct()">Sign In</button>
                 </form>
