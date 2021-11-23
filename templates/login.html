@@ -34,7 +34,8 @@
             <!-- SignUp Form -->
     
             <div class="form-container sign-up-container">
-                <form action="#" class="form-signUp" method="POST">
+                {% csrf_token %}
+                <form action="" class="form-signUp" method="POST">
                     <h1>Create Account</h1>
                     <div class="social-container">
                         <a href="#" class="social" id="social"><i class="fab fa-facebook"></i></a>
