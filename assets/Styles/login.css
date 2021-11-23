@@ -3,6 +3,10 @@
   padding: 0;
   font-family: "Poppins", "sans-serif";
 }
+#particles-js {
+  background: black;
+  height: 100vh;
+}
 .popup-container {
   display: block;
   position: absolute;
@@ -85,7 +89,7 @@
   width: 40px;
 }
 .social-container img {
-  border: 2px solid #2d7070;
+  border: 2px solid #1b4446;
   border-radius: 30px;
   transition: 0.2s transform;
 }
@@ -105,8 +109,8 @@
 
 .popup-container button {
   border-radius: 20px;
-  border: 1px solid #2d7070;
-  background: #2d7070;
+  border: 1px solid #1b4446;
+  background: #1b4446;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -186,8 +190,9 @@ button.ghost {
   transition: transform 0.5s ease-in-out;
   z-index: 100;
 }
+
 .overlay {
-  background: #2d7070;
+  background: #1b4446;
   background-size: cover;
   background-position: 0 0;
   color: #ffffff;
