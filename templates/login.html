@@ -34,17 +34,18 @@
             <!-- SignUp Form -->
     
             <div class="form-container sign-up-container">
-                {% csrf_token %}
-                <form action="" class="form-signUp" method="POST">
+                
+                <form action="register" class="form-signUp" method="post">
+                    {% csrf_token %}
                     <h1>Create Account</h1>
                     <div class="social-container">
                         <a href="#" class="social" id="social"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social" id="social"><i class="fab fa-google"></i></a>
                     </div>
                     <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" id = "name" required>
-                    <input type="email" placeholder="Email" id="email" required>
-                    <input type="password" placeholder="Password" id="pass" required>
+                    <input type="text" placeholder="Name" name= "name" id = "name" required>
+                    <input type="email" placeholder="Email" name= "email" id="email" required>
+                    <input type="password" placeholder="Password" name ="password" id="pass" required>
                     <button type="submit" id="register">Sign Up</button>
                 </form>
             </div>
