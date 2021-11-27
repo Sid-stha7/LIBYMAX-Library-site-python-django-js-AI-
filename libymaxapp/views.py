@@ -3,6 +3,10 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
 
+#function for rendering the main page 
+def landing(request):
+    return render(request, 'index.html')
+
 def register(request):
     if request.method == 'POST':
         
@@ -42,4 +46,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+#function for rendering the main page 
+def landing(request):
+    return render(request, 'index.html')
     
