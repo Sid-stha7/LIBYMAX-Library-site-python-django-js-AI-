@@ -1,11 +1,32 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+import requests
 
+APIkey = 'ec7a9cfa19bc4ed297992f8a2ed2c8a0'
+category = 'Books'
 
 #function for rendering the main page 
 def landing(request):
-    return render(request, 'index.html')
+   
+   #fetching of the news for the latest news section on landing page 
+    url  = f'https://newsapi.org/v2/everything?q={category}&from=2021-11-30&sortBy=popularity&apiKey={APIkey}'
+    response = requests.get(url)
+    data = response.json()
+    articles = data['articles']
+
+    context = {
+        'articles' : articles
+    }
+
+    return render(request, 'index.html' , context)
+    
+
+
+
+
+
+
 
 def register(request):
     if request.method == 'POST':
@@ -46,7 +67,5 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-#function for rendering the main page 
-def landing(request):
-    return render(request, 'index.html')
+
     
