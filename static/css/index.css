@@ -38,7 +38,6 @@ section{
 }
 .logocontainer{
     display: inline-block;
-    border-bottom: .35px solid #ffffff;
     animation-duration: 3s;
     animation-name: slideinleft;
     font-family: 'Poppins', sans-serif;
