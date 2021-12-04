@@ -1,0 +1,256 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+header{
+
+    background-color: #1B4446;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+ .mid{
+     margin-top: 150px;
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .profilecard{
+     width: 300px;
+    height: 490px;
+    border-radius: 3px;
+    position: fixed;
+    margin-top: -12px;
+    margin-left: -800px;
+    box-shadow: 3px 5px 7px 2px rgba(0,0,0,0.49);
+    background-color: #ffffff;
+}
+
+ .dpinfo{
+     position: relative;
+     text-align: center;
+     border-bottom: 1px solid #ffffff;
+     padding: 10px;
+     cursor: pointer;
+ }
+ .dpinfo span {
+     position: absolute;
+     left: 185px;
+     top: 129px;
+     width: 26px; height:26px;
+     border-radius: 160px;
+    
+     display: inline;
+     background-color: #ffffff;
+ }
+
+ .jobsapplied , .acceptedto ,.current{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding: 15px;
+    color: #1B4446;
+    cursor:none;
+    }
+.history span{
+    margin-left: 80px;
+    color: #ffffff;
+    display: inline;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #1B4446;
+}
+
+.history span:hover{
+    background-color: #ffffff;
+    color: #1B4446;
+    border: 1px solid #1B4446;
+}
+
+.details{
+  width: 750px;
+  height: 1100px;
+  border: 1px solid #7eabee;
+  box-shadow: 3px 5px 7px 2px rgba(0,0,0,0.49);
+  border-radius: 4px;
+  margin-left: 350px;
+  margin-top: -10px;
+}
+
+.head{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #1B4446;
+  padding: 12px;
+  color: #1B4446;
+  
+}
+
+.head a {
+  color: #1B4446;
+  font-size: 14px;
+}
+.frow{
+  margin-top: 20px;
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+.labels{
+  display: flex;
+  justify-content: space-around;
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.projects , .table ,.bill{
+  margin-top: 50px;
+  font-family: "Poppins";
+  margin-bottom: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #1B4446;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.fname , .lname {
+  color: #1B4446;
+  text-align: left;
+}
+input{
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #e9e7e7;
+  height: 40px;
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #1B4446;
+  border-radius: 6px;
+  text-align: center;
+  outline: none;
+}
+.pbtn , .bbtn{
+  display: none;
+}
+#pnames ul {
+  list-style: none;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e9e7e7;
+
+  padding: 30px 30px 30px 30px;
+  border-radius: 7px;
+  text-align: justify;
+  color: #1B4446;
+}
+
+#pnames li{
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.table{
+  border-radius: 5px;
+  width: 600px;
+  margin-left: 0px;
+  margin-top: 10px;
+  color: #1B4446;
+  background-color: #ffffff;
+  border: 1px solid #e9e7e7;
+}
+
+.save{
+  margin-left: 300px;
+  margin-top: -20px;
+  padding: 10px;
+  background-color: #1B4446;
+  color: #ffffff;
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save a{
+  color: #ffffff;
+  margin-left: 6px;
+ 
+  text-align: center;
+}
+
+.save:hover{
+transform: scale(1.1);
+}
+
+
+@media (max-width:960px){
+
+  .profilecard{
+  height: 250px;
+  margin-top: -40px;
+   margin-left: 30px;
+   border-radius: 6px;
+   position: fixed;
+   z-index: 20;
+}
+
+.jobsapplied , .acceptedto ,.current{
+  display: none;
+  }
+.details{
+  width: 400px;
+  height: 700px;
+  margin-top: 220px;
+  margin-left: 20px;
+  position: absolute;
+  z-index: 21;
+  background-color: #ffffff;
+}
+input{
+  width: 150px;
+}
+
+/* .head{
+  display: block;
+} */
+#pnames{
+  display: none;
+}
+.table{
+
+  display: none;
+}
+
+.pbtn , .bbtn{
+  display: block;
+  width: 190px;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 40px;
+  background-color: #1B4446;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save{
+  margin-top: 20px;
+  margin-left: 33px;
+}
+}

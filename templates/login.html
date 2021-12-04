@@ -5,35 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'Styles/login.css'%}">
-    <link rel="stylesheet" href="{% static 'Styles/index.css'%}">
-    <link rel="stylesheet" href="{% static 'Styles/toggle.css'%}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toggle.css'  %}">
     <title>Login</title>
-    <!-- {%static '' %} -->
 </head>
 <body id="bodydisplay">
     <header>
         <div class="page-header">
-            <div class="logocontainer" style="background-color:#1b4446; width: 100%; animation: none;">
-                <img class="logo" src="{%static 'Images/Logo.svg' %}" alt="WebsiteLogo"> &nbsp;
-                <span class="first">LIBY</span>
-                <span class="second">MAX</span>
+            <div class="logocontainer" style="background-color:#1B4446; width: 100%; animation: none; padding-left: 20px;">
+                <!--<img class="logo" src="Images/Logo.svg" alt="WebsiteLogo"> &nbsp;-->
+                <br><span class="first" style="color:#E29E21;"><b>LIBY</b></span>
+                <span class="second">max</span>
             </div>
         </div>
     </header>
-    <ul class="d-flex flex-row align-items-start justify-content-start">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
 
-        {% if user.is_authenticated %}
-        <li>Hello, {{user.username}}</li>
-        <li><a href="accounts/logout">Logout</a></li>
-        {% else %}	
-        <li><a href="accounts/register">Register</a></li>
-        <li><a href="accounts/login">Login</a></li>
-        {% endif %}
-    </ul>
-    <section style="height: 560px; background-color:#2c6e59" id="particles-js">
+    <section style="height: 560px;">
 
         
         <div class="wave wave1"></div>
@@ -45,18 +33,16 @@
             <!-- SignUp Form -->
     
             <div class="form-container sign-up-container">
-                
-                <form action="register" class="form-signUp" method="post">
-                    {% csrf_token %}
+                <form action="#" class="form-signUp" method="POST">
                     <h1>Create Account</h1>
                     <div class="social-container">
                         <a href="#" class="social" id="social"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social" id="social"><i class="fab fa-google"></i></a>
                     </div>
                     <span>or use your email for registration</span>
-                    <input type="text" placeholder="Username" name= "username" id = "name" required>
-                    <input type="email" placeholder="Email" name= "email" id="email" required>
-                    <input type="password" placeholder="Password" name ="password" id="pass" required>
+                    <input type="text" placeholder="Name" id = "name" required>
+                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="password" placeholder="Password" id="pass" required>
                     <button type="submit" id="register">Sign Up</button>
                 </form>
             </div>
@@ -64,18 +50,15 @@
             <!-- SignIn Form -->
     
             <div class="form-container sign-in-container">
-                <form action="login" class="form-signin" method="POST">
-                    {% csrf_token %}   
+                <form action="" class="form-signin" method="POST">
                     <h1>Sign In With</h1>
                     <div class="social-container">
-                        <img src="{%static 'Images/facebook2.png' %}" alt="" style="width: 50px ; height:50px;">
-
-                        <img src="{%static 'Images/google.png' %}" alt="" style="width: 50px ; height:50px;">
-    
+                        <img src="{% static 'images/facebook2.png' %} " alt="" style="width: 50px ; height:50px;">
+                        <img src="{% static 'images/google.png' %}" alt="" style="width: 50px ; height:50px;">
                     </div>
                     <span>or use your account</span>
-                    <input type="email" placeholder="Email" username="email"id ="e-mail" required>
-                    <input type="password" name="password" placeholder="Password" id="password" required>
+                    <input type="email" placeholder="Email" id ="e-mail" required>
+                    <input type="password" placeholder="Password" id="password" required>
                     <a href="#" id="forget-link">Forgot your password?</a>
                     <button type="submit" id="login" onclick="direct()">Sign In</button>
                 </form>
@@ -94,7 +77,7 @@
     
                     <div class="overlay-panel overlay-right">
                         <h1>Hello!</h1>
-                        <p>Enter your details and start yourjourney</p>
+                        <p>Enter your details and start your journey</p>
                         <button class="ghost" id="signUp">Sign Up</button>
                     </div>
     
@@ -103,26 +86,26 @@
             </div>
         </div>
         <!-- End of the PopUp div. -->
-        <div class="accesible" onclick="displaymodal()">
+        <!-- <div class="accesible" onclick="displaymodal()">
             <div>
-              <button  class="modal-btn"  ><img  src="{%static 'Images/accessibility.png' %}" alt=""></button>
+              <button  class="modal-btn"  ><img  src="{% static 'images/accessibility.png' %}" alt=""></button>
             </div>
-          </div>
+          </div> -->
           
-          <div class="modal" id="modal">
-            <header>Accesibility Options<img id="closeme" src="{%static 'Images/cross.png' %}" alt="" onclick="closemodal()"></header>
+          <!-- <div class="modal" id="modal">
+            <header>Accesibility Options<img id="closeme" src="Images/cross.png" alt="" onclick="closemodal()"></header>
             <div class="option">
               <ul>
-                <li><span  onclick="gray()">GrayScale Mode</span> <img src="{%static 'Images/undo.png' %}" alt="" onclick="undoinvert()"> </li>
-                <li><span onclick="invert()">Invert Colors </span> <img src="{%static 'Images/undo.png' %}" alt="" onclick="undoinvert()"></button></li>
-                <li><span  onclick="bright()">Add Brightness </span> <img src="{%static 'Images/undo.png' %}" alt="" onclick="undoinvert()"></li>
+                <li><span  onclick="gray()">GrayScale Mode</span> <img src="Images/undo.png" alt="" onclick="undoinvert()"> </li>
+                <li><span onclick="invert()">Invert Colors </span> <img src="Images/undo.png" alt="" onclick="undoinvert()"></button></li>
+                <li><span  onclick="bright()">Add Brightness </span> <img src="Images/undo.png" alt="" onclick="undoinvert()"></li>
           
                 <li style="font-size: 16px;">Translate to<div id="google_translate_element"></div></li>
                 <li><span onclick="decreasefont()"> A- </span><span onclick="normalfont()"> &nbsp;&nbsp;&nbsp;&nbsp;A </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="increasefont()">A+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li><img src="{%static 'Images/rest.png' %}" alt="" onclick="undoinvert()" style="text-align: center;"><span style=" cursor:no-drop;">Reset Settings</span></li>
+                <li><img src="Images/rest.png" alt="" onclick="undoinvert()" style="text-align: center;"><span style=" cursor:no-drop;">Reset Settings</span></li>
               </ul>
             </div>
-          </div>
+          </div> -->
     </section>
 
         <!--Start of Tawk.to Script-->
@@ -139,14 +122,9 @@
     </script>
     <!--End of Tawk.to Script-->
     
-    <script src="{%static 'JavaScrpits/authorize.js' %}"></script>
+    <script src="{% static 'js/authorize.js' %} "></script>
     <!-- <script src="../JavaScrpits/index.js"></script> -->
-    <script src="{%static 'JavaScrpits/toogle.js' %}"></script>
-
-    <script src="{%static 'JavaScrpits/particles.js-master/particles.js' %}"></script>
-    <script src="{%static 'JavaScrpits/particles.js-master/demo/js/app.js' %}"></script>
-
-
+    <script src="{% static 'js/toogle.js' %} "></script>
     <!-- <script src="../JavaScrpits/browse.js"></script> -->
 
     <script type="text/javascript">
@@ -157,5 +135,7 @@
       
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       
+        
+
 </body>
 </html>
