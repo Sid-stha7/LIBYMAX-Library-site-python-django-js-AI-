@@ -122,6 +122,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/' 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # in the static folder which is in base directory all the styling ,images and file folder is stored
 # the static folder will be copied in the assets folder where data are stored from online database as well

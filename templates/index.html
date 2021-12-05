@@ -174,12 +174,13 @@
         <h2>
           Best Picks Of November 2021
         </h2>
-      </div>
+      </div> 
       <div class="row">
+        {% for book in recommended_books %}
         <div class="col-sm-6 col-md-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src=" {% static 'images/i1.jpg' %}" class="box-img" alt="">
+              <img src=" {{book.coverImage.url}}" class="box-img" alt="">
             </div>
             <div class="detail-box">
               <a href="">
@@ -188,30 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src=" {% static 'images/i3.jpg' %}" class="box-img" alt="">
-            </div>
-            <div class="detail-box">
-              <a href="">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src=" {% static 'images/i2.jpg' %}" class="box-img" alt="">
-            </div>
-            <div class="detail-box">
-              <a href="">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="btn-box" style="color:#1b4446;">
         <a href="">
@@ -266,7 +244,7 @@
 
   <!-- end app section -->
 
-  <!-- about section --> -->
+  <!-- about section --> 
 
   <section class="about_section layout_padding" id ="aboutus">
     <div class="container">
