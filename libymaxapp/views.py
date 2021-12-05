@@ -1,14 +1,29 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+import requests
+
+APIkey = 'ec7a9cfa19bc4ed297992f8a2ed2c8a0'
+category = 'Books'
+
+#function for rendering the main page 
+def landing(request):
+
+   #fetching of the news for the latest news section on landing page 
+    url  = f'https://newsapi.org/v2/everything?q={category}&from=2021-11-30&sortBy=popularity&apiKey={APIkey}'
+    response = requests.get(url)
+    data = response.json()
+    articles = data['articles']
+
+    context = {
+        'articles' : articles
+    }
+
+    return render(request, 'index.html' , context)
+    
 
 
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth.models import User, auth
-
-# Create your views here.
-
+# register and login
 
 def login(request):
     if request.method== 'POST':
@@ -19,7 +34,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect("register")
+            return redirect("/")
         else:
             messages.info(request,'invalid credentials')
             return redirect('login')
@@ -30,6 +45,8 @@ def login(request):
 def register(request):
 
     if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
         username = request.POST['username']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
@@ -43,19 +60,21 @@ def register(request):
                 messages.info(request,'Email Taken')
                 return redirect('register')
             else:   
-                user = User.objects.create_user(username=username, password=password1, email=email)
-                user.save()
+                user = User.objects.create_user(username=username, password=password1, email=email,first_name=first_name,last_name=last_name)
+                user.save();
                 print('user created')
                 return redirect('login')
 
         else:
             messages.info(request,'password not matching..')    
             return redirect('register')
-        
+        return redirect('/')
         
     else:
-        return render(request,'login.html')
+        return render(request,'register.html')
+
+
 
 def logout(request):
     auth.logout(request)
-    return redirect('register') 
+    return redirect('/')       

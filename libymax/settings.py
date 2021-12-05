@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+   
     'libymaxapp.apps.LibymaxappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,11 +78,8 @@ WSGI_APPLICATION = 'libymax.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LIBYMAX',
-        'USER': 'postgres',
-        'PASSWORD': '123456789',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 

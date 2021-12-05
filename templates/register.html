@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toggle.css'  %}">
+    <title>Login</title>
+  </head>
+  <body id="bodydisplay">
+    <section style="height: 560px">
+      <!-- <form action="login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username" /><br />
+        <input type="password" name="password" placeholder="password" /><br />
+        <input type="Submit" />
+      </form>
+
+      <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+      </div> -->
+
+    
+   
+        <header>
+            <div class="page-header">
+                <div class="logocontainer" style="background-color:#1B4446; width: 100%; animation: none; padding-left: 20px;">
+                    <!--<img class="logo" src="Images/Logo.svg" alt="WebsiteLogo"> &nbsp;-->
+                    <br><span class="first" style="color:#e9bc6a;"><b>LIBY</b></span>
+                    <span class="second">max</span>
+                </div>
+            </div>
+        </header>
+    
+        <section style="height: 560px;">
+    
+            
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+            <div class="popup-container" id = "popup-container">
+                
+                <!-- SignUp Form -->
+        
+                <div class="form-container sign-up-container">
+                    <form action="#" class="form-signUp" method="POST">
+                      {% csrf_token %}
+                        <h1>Create Account</h1>
+                        <div class="social-container">
+                            <a href="#" class="social" id="social"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social" id="social"><i class="fab fa-google"></i></a>
+                        </div>
+                        <input type="text" name="first_name" id="name" placeholder="First Name" /><br />
+                        <input type="text" name="last_name" id="name" placeholder="Last Name" /><br />
+                        <input type="text" name="username" id="name" placeholder="Username" /><br />
+                        <input type="email" name="email" id="name" placeholder="email" /><br />
+                        <input type="password" name="password1" id="name" placeholder="Password" /><br />
+                        <input type="password" name="password2" id="name" placeholder="Confirm Password"/><br />
+                        <input type="Submit" />
+                    </form>
+                    <div>
+                      {% for message in messages %}
+                      <h3>{{message}}</h3>
+                      {% endfor %}
+                    </div>
+                </div>
+        
+                <!-- SignIn Form -->
+        
+                <div class="form-container sign-in-container">
+                    <form action="login" class="form-signin" method="post">
+                      {% csrf_token %}
+                        <h1>Sign In With</h1>
+                        <div class="social-container">
+                            <img src="{% static 'images/facebook2.png' %} " alt="" style="width: 50px ; height:50px;">
+                            <img src="{% static 'images/google.png' %}" alt="" style="width: 50px ; height:50px;">
+                        </div>
+                        <span>or use your account</span>
+                        <input type="text" name="username" id ="e-mail"  placeholder="username" />
+                        <input type="password" name="password"  id="password"  placeholder="password" /><br />
+                        <a href="#" id="forget-link">Forgot your password?</a>
+                        <button type="submit" id="login" >Sign In</button>
+                    </form>
+
+                    <div>
+                      {% for message in messages %}
+                      <h3>{{message}}</h3>
+                      {% endfor %}
+                    </div>
+                </div>
+        
+                <!-- Overlays for the Forms -->
+                <div class="overlay-container">
+        
+                    <div class="overlay">
+        
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected please enter your log in details.</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+        
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello!</h1>
+                            <p>Enter your details and start your journey</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+            
+              
+        </section>
+    
+            <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6082be295eb20e09cf35e623/1f3vbdksk';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <!--End of Tawk.to Script-->
+        
+        <script src="{% static 'js/authorize.js' %} "></script>
+        <!-- <script src="../JavaScrpits/index.js"></script> -->
+        <script src="{% static 'js/toogle.js' %} "></script>
+        <!-- <script src="../JavaScrpits/browse.js"></script> -->
+    
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+            </script>
+          
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+            
+    
+    </body>
+        
+</html>
