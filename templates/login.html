@@ -33,6 +33,7 @@
         <li><a href="accounts/login">Login</a></li>
         {% endif %}
     </ul>
+    
     <section style="height: 560px; background-color:#2c6e59" id="particles-js">
 
         
@@ -48,6 +49,7 @@
                 
                 <form action="register" class="form-signUp" method="post">
                     {% csrf_token %}
+                  
                     <h1>Create Account</h1>
                     <div class="social-container">
                         <a href="#" class="social" id="social"><i class="fab fa-facebook"></i></a>
@@ -56,9 +58,16 @@
                     <span>or use your email for registration</span>
                     <input type="text" placeholder="Username" name= "username" id = "name" required>
                     <input type="email" placeholder="Email" name= "email" id="email" required>
-                    <input type="password" placeholder="Password" name ="password" id="pass" required>
+                    <input type="password" placeholder="Password" name ="password1" id="pass" required>
+                    <input type="password" placeholder="Confirm Password" name ="password2" id="pass" required>
+
                     <button type="submit" id="register">Sign Up</button>
                 </form>
+                <div>
+                    {% for messages in messages %}
+                    <h3>{{messages}} </h3>
+                    {% endfor %}
+                </div>
             </div>
     
             <!-- SignIn Form -->
