@@ -1,7 +1,8 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Book
+from .models import Book , Genre , Data
+from django.db.models import Q
 import requests
 
 APIkey = 'ec7a9cfa19bc4ed297992f8a2ed2c8a0'
@@ -20,7 +21,7 @@ def landing(request):
     recommended_books = Book.objects.filter(recomended=True)
     bestseller_books = Book.objects.filter(bestseller=True)
     context = {
-        'recommended_books': recommended_books, 'bestseller_books': bestseller_books ,  'articles' : articles
+      'bestseller_books': bestseller_books ,  'articles' : articles
     }
    
 
@@ -35,16 +36,31 @@ def home(request):
 
 def browse(request):
 
+   
+    if 'q' in request.GET:
+        q = request.GET['q']
+        multiple_q = Q(Q(book_author__icontains=q) | Q(book_title__icontains=q) | Q(book_genre__icontains=q))
+        data = Data.objects.filter(multiple_q)
+        
+    else:
+        data = Data.objects.all()
+
+
+
     recommended_books = Book.objects.filter(recomended=True)
     bestseller_books = Book.objects.filter(bestseller=True)
     context = {
-        'recommended_books': recommended_books, 'bestseller_books': bestseller_books 
+        'recommended_books': recommended_books ,  'data': data
     }
    
-    return render(request, 'browse.html' , context)
+    return render(request, 'browse.html' , {
+        'recommended_books': recommended_books ,  'data': data
+    })
 
 
-
+# def genre_detail(request , slug):
+#     genre = Genre.objects.get(slug=slug)
+#     return render(request, 'book.html')
 
 
 def register(request):

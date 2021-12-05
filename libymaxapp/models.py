@@ -18,11 +18,18 @@ class Book(models.Model):
     genre = models.ForeignKey(Genre,on_delete=models.CASCADE)
     pdf = models.FileField(upload_to='pdf/',blank=True , null = True)
     recomended= models.BooleanField(default=False)
-    bestseller= models.BooleanField(default=False)
     fiction_books = models.BooleanField(default=False)
     nonfiction_books = models.BooleanField(default=False)
-    bestseller_books = models.BooleanField(default=False)
+    bestseller = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
 
+
+class Data(models.Model):
+    book_title = models.CharField(max_length=100)
+    book_author = models.CharField(max_length=100)
+    book_genre = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.book_title

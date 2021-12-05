@@ -42,8 +42,6 @@
 </head>
 
 <body>
-
-
   <div class="hero_area" >
     <!-- header section strats -->
     <header class="header_section">
@@ -97,17 +95,17 @@
                     <form>
                       <div class="form-row ">
                         <div class="form-group col-lg-5">
-                          <input type="text" class="form-control" id="inputHotel" placeholder="Book/Author Name">
+                          <input type="text" class="form-control" id="inputHotel" placeholder="Book/Author Name" name="q">
                         </div>
                         <div class="form-group col-lg-3">
-                          <input type="text" class="form-control" id="inputLocation" placeholder="Genre">
+                          <input type="text" class="form-control" id="inputLocation" placeholder="Genre" name="q">
                           <span class="location_icon">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                           </span>
                         </div>
                         <div class="form-group col-lg-3">
                           <div class="btn-box">
-                            <button type="submit" class="btn ">Search Book</button>
+                            <button type="submit" class="btn " >Search Book</button>
                           </div>
                         </div>
                       </div>
@@ -122,75 +120,72 @@
 
       
 
-      <!-- <div class="slider_container">
-        <div class="item">
-          <div class="img-box">
-            <img src=" {%static 'images/1.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/2.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/3.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/4.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/5.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src= " {% static 'images/6.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src= " {% static 'images/7.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/7.png' %}" alt="" />
-          </div>
-        </div>
-      </div>
-    </section> -->
+    
     <!-- end slider section -->
   </div>
 
-  <section class="recipe_section layout_padding-top">
+  <!-- <section class="news_section" style="margin-top: -360px;"  >
+   
+   
+    <div class="heading_container heading_center">
+      <h2>
+      Search Result
+      </h2> -->
+    <!-- </div>  -->
+    <!-- {% for i in data %}
+        <div class="newscollector" >
+          
+            <div class="flexitem" >
+               
+                      <div class="card rounded shadow-lg m-2" style="width: 20rem;">
+
+                          <img src="{{ i.coverImage }}" class="card-img-top" alt="...">
+                          <div class="card-body" style ="background-color:#1b4446; color:#ffffff;">
+                          <p class="card-text">By: {{ i.author }}</p>
+                          <h5 class="card-title">{{ i.title }}</h5>
+                          <p class="card-title">Source: {{ i.source.name }}</p>
+                          <p class="card-text" style ="text-align: left">{{ i.description }}</p>
+                          <hr>
+                         
+                          </div>
+              
+                      </div>                
+              
+        </div>
+     
+        </div> 
+       {% endfor %}  -->
+    
+    
+   
+  <!-- </section> -->
+
+  <section class="recipe_section layout_padding-top" style = "margin-top: -450px; margin-bottom:50px;">
     <div class="container">
+
+      <div class="heading_container heading_center">
+        <h2>
+         Picks For You
+        </h2>
+      </div> 
+
       <div class="row">
         {% for book in recommended_books %}
-        <div class="col-sm-2 col-md-2 mx-auto">
+        <div class="col-sm-2 col-md-3 mx-auto">
           <div class="box">
             <div class="img-box">
               <img src=" {{book.coverImage.url}}" class="box-img" alt="">
             </div>
-            <div class="detail-box">
+            <div class="btn-box" style="color:#1b4446;">
               <a href="">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+               Read Book
               </a>
             </div>
           </div>
         </div>
         {% endfor %}
       </div>
-      <div class="btn-box" style="color:#1b4446;">
-        <a href="">
-         Read Now
-        </a>
-      </div>
+      
     </div>
   </section>
 
