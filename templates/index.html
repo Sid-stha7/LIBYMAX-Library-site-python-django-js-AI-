@@ -1,467 +1,539 @@
 {%load static%}
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <title>LIBYmax</title>
 
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css' %}"
+    />
 
-  <title>LIBYmax</title>
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %} " rel="stylesheet" />
+    <!-- nice select -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4="
+      crossorigin="anonymous"
+    />
+    <!-- slidck slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css.map"
+      integrity="undefined"
+      crossorigin="anonymous"
+    />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <!-- Custom styles for this template -->
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  </head>
 
-  <!-- font awesome style -->
-  <link href="{% static 'css/font-awesome.min.css' %} " rel="stylesheet" />
-  <!-- nice select -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-  <!-- slidck slider -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css.map" integrity="undefined" crossorigin="anonymous" />
-
-
-  <!-- Custom styles for this template -->
- 
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-
-</head>
-
-<body>
-
-
-  <div class="hero_area" >
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href=" {% static 'index.html' %}">
-            <span>
-              <span style="color:#e9bc6a;">
-                LIBY </span>
-              max
-            </span>
-          </a>
-          <div class="" id="">
-            <div class="User_option">
-              <a href="register">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>Login</span>
-              </a>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href=" {% static 'index.html' %}">Home</a>
-                <a href="#aboutus">About</a>
-                <a href="#testimonial">Testimonial</a>
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href=" {% static 'index.html' %}">
+              <span>
+                <span style="color: #e9bc6a"> LIBY </span>
+                max
+              </span>
+            </a>
+            <div class="" id="">
+              <div class="User_option">
+                <ul
+                  class="
+                    d-flex
+                    flex-row
+                    align-items-start
+                    justify-content-start
+                  "
+                >
+                  {% if user.is_authenticated %}
+                  <li><a href="/">Hello, {{user.first_name}}</a></li>
+                  <li><a href="logout">Logout</a></li>
+                  {% else %}
+                  <li><a href="register">Register</a></li>
+                  <li><a href="login">Login</a></li>
+                  {% endif %}
+                </ul>
+              </div>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href=" {% static 'index.html' %}">Home</a>
+                  <a href="#aboutus">About</a>
+                  <a href="#testimonial">Testimonial</a>
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
 
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div class="container ">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <div class="detail-box">
-              <h1>
-                Discover and <span style="color:#e9bc6a;">
-                Read </span> Stories 
-              </h1>
-              <p>
-                from around the world
-              </p>
-            </div>
-            <div class="find_container ">
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <form>
-                      <div class="form-row ">
-                        <!-- <div class="form-group col-lg-5">
-                          <input type="text" class="form-control" id="inputHotel" placeholder="Book/Author Name">
-                        </div> -->
-                        <!-- <div class="form-group col-lg-3">
-                          <input type="text" class="form-control" id="inputLocation" placeholder="Genre">
-                          <span class="location_icon">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                          </span>
-                        </div> -->
-                        <div class="form-group col-lg-3">
-                          <div class="btn-box">
-                            <a href=" {% static 'browse.html' %}"> 
-                              <button type="submit" class="btn ">Search Book</button>
-                            </a>
-                           
+      <!-- slider section -->
+      <section class="slider_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <div class="detail-box">
+                <h1>
+                  Discover and
+                  <span style="color: #e9bc6a"> Read </span> Stories
+                </h1>
+                <p>from around the world</p>
+              </div>
+              <div class="find_container">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <form method="POST"  action="browse">
+                        {% csrf_token %}
+                        <div class="form-row">
+               
+                          <div class="form-group col-lg-3">
+                            <div class="btn-box">
+                              <button type="submit" class="btn" >
+                                Search Book
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="slider_container">
+          <div class="item">
+            <div class="img-box">
+              <img src=" {%static 'images/1.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/2.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/3.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/4.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/5.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/6.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/7.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src=" {% static 'images/7.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end slider section -->
+    </div>
+
+    <!-- best pick section -->
+
+    <section class="recipe_section layout_padding-top">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Best Picks Of November 2021</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img
+                  src=" {% static 'images/i1.jpg' %}"
+                  class="box-img"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img
+                  src=" {% static 'images/i3.jpg' %}"
+                  class="box-img"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img
+                  src=" {% static 'images/i2.jpg' %}"
+                  class="box-img"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box" style="color: #1b4446">
+          <a href=""> Read Now </a>
+        </div>
       </div>
-      <div class="slider_container">
-        <div class="item">
-          <div class="img-box">
-            <img src=" {%static 'images/1.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/2.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/3.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/4.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/5.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src= " {% static 'images/6.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src= " {% static 'images/7.png' %}" alt="" />
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-box">
-            <img src=" {% static 'images/7.png' %}" alt="" />
+    </section>
+
+    <!-- end of best pick section -->
+
+    <!-- app section -->
+
+    <section class="app_section">
+      <div class="container">
+        <div class="col-md-9 mx-auto">
+          <div class="row">
+            <div class="col-md-7 col-lg-8">
+              <div class="detail-box">
+                <h2>
+                  <span> Get the</span> <br />
+                  LIBYmax App
+                </h2>
+                <p>
+                  long established fact that a reader will be distracted by the
+                  readable content of a page when looking at its layout. The
+                  poin
+                </p>
+                <div class="app_btn_box">
+                  <a href="" class="mr-1">
+                    <img
+                      src="{% static 'images/google_play.png' %}"
+                      class="box-img"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <img
+                      src="{% static 'images/app_store.png' %}"
+                      class="box-img"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <a href="" class="download_btn"> Download Now </a>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="img-box">
+                <img
+                  src="{% static 'images/mobilealt.png' %}"
+                  class="box-img"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- end slider section -->
-  </div>
 
+    <!-- end app section -->
 
-  <!-- best pick section -->
+    <!-- about section -->
 
-  <section class="recipe_section layout_padding-top">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Best Picks Of November 2021
-        </h2>
-      </div> 
-      <div class="row">
-        {% for book in bestseller_books %}
-        <div class="col-sm-6 col-md-4 mx-auto">
+    <section class="about_section layout_padding" id="aboutus">
+      <div class="container">
+        <div class="col-md-11 col-lg-10 mx-auto">
+          <div class="heading_container heading_center">
+            <h2>About LIBYmax</h2>
+          </div>
           <div class="box">
-            <div class="img-box">
-              <img src=" {{book.coverImage.url}}" class="box-img" alt="">
+            <div class="col-md-7 mx-auto">
+              <div class="img-box">
+                <img
+                  src="{% static 'images/aboutusalt.png' %}"
+                  class="box-img"
+                  alt=""
+                />
+              </div>
             </div>
             <div class="detail-box">
+              <p>
+                Libymax is a book reading space created with the objective of
+                making the reading experience more enjoyable, engaging and
+                mostly accessible to everyone. Through the web app you can now
+                join in as a reader and download books of your choice for freee.
+              </p>
               <a href="">
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
-      <div class="btn-box" style="color:#1b4446;">
-        <a href="">
-         Read Now
-        </a>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- news section -->
+
+    <div class="container" style="margin-bottom: 40px">
+      <div class="heading_container heading_center">
+        <h2>Latest News</h2>
       </div>
     </div>
-  </section>
 
-  <!-- end of best pick section -->
-
-  <!-- app section -->
-
-  <section class="app_section">
-    
- 
-   <div class="container">
-      <div class="col-md-9 mx-auto">
-        <div class="row">
-          <div class="col-md-7 col-lg-8">
-            <div class="detail-box">
-              <h2>
-                <span> Get the</span> <br>
-                LIBYmax App
-              </h2>
-              <p>
-                long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin
+    <section
+      class="news_section"
+      style="display: flex; justify-content: space-around; margin-bottom: 20px"
+    >
+      {% for i in articles %} {% if forloop.counter <= 4 %}
+      <div class="newscollector">
+        <div class="flexitem">
+          <div class="card rounded shadow-lg m-2" style="width: 20rem">
+            <img src="{{ i.urlToImage }}" class="card-img-top" alt="..." />
+            <div
+              class="card-body"
+              style="background-color: #1b4446; color: #ffffff"
+            >
+              <small>Date: {{ i.publishedAt }}</small>
+              <p class="card-text">By: {{ i.author }}</p>
+              <h5 class="card-title">{{ i.title }}</h5>
+              <p class="card-title">Source: {{ i.source.name }}</p>
+              <p class="card-text" style="text-align: left">
+                {{ i.description }}
               </p>
-              <div class="app_btn_box">
-                <a href="" class="mr-1">
-                  <img src="{% static 'images/google_play.png' %}" class="box-img" alt="">
-                </a>
-                <a href="">
-                  <img src="{% static 'images/app_store.png' %}" class="box-img" alt="">
-                </a>
-              </div>
-              <a href="" class="download_btn">
-                Download Now
-              </a>
-            </div>
-          </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="img-box">
-              <img src="{% static 'images/mobilealt.png' %}" class="box-img" alt="">
+              <hr />
+              <a
+                href="{{ i.url }}"
+                target="_blank"
+                class="btn btn-success m-1"
+                style="background-color: #ffff; color: #1b4446; border: none"
+                >Read News</a
+              >
             </div>
           </div>
         </div>
       </div>
-    </div> 
 
-  </section>
+      {% endif %} {% endfor %}
+    </section>
 
-  <!-- end app section -->
+    <!-- end news section -->
 
-  <!-- about section --> 
+    <!-- client section -->
 
-  <section class="about_section layout_padding" id ="aboutus">
-    <div class="container">
-      <div class="col-md-11 col-lg-10 mx-auto">
-        <div class="heading_container heading_center">
-          <h2>
-            About LIBYmax
-          </h2>
-        </div>
-        <div class="box">
-          <div class="col-md-7 mx-auto">
-            <div class="img-box">
-              <img src= "{% static 'images/aboutusalt.png' %}" class="box-img" alt="">
-            </div>
+    <section class="client_section layout_padding" id="testimonial">
+      <div class="container">
+        <div class="col-md-11 col-lg-10 mx-auto">
+          <div class="heading_container heading_center">
+            <h2>Here is what our users have to say about us</h2>
           </div>
-          <div class="detail-box">
-            <p>
-              Libymax is a book reading space created with the objective of making the reading experience more enjoyable, engaging and mostly accessible to everyone. Through the web app you can now join in as a reader and download books of your choice for freee.
-            </p>
-            <a href="">
+          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="detail-box">
+                  <h4>DroX</h4>
+                  <p>
+                    Before LIBYmax, I used to have such a hassle finding the
+                    ebook I was looking for but now I can find it easily.
+                  </p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="detail-box">
+                  <h4>Happy</h4>
+                  <p>Could an application be more benificial ?</p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="detail-box">
+                  <h4>Ischyros Olethros</h4>
+                  <p>
+                    I am a student of the University of Athens and I was looking
+                    for a book that I wanted to read but couldnt find anywhere
+                    else but here.
+                  </p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev d-none"
+              href="#customCarousel1"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#customCarousel1"
+              role="button"
+              data-slide="next"
+            >
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- news section -->
-
-  <div class="container"  style ="margin-bottom: 40px;">
-    <div class="heading_container heading_center">
-      <h2>
-        Latest News
-      </h2>
-    </div>
-  </div>
-
-  <section class="news_section" style="display: flex; justify-content:space-around; margin-bottom: 20px;"  >
-   
-   
-    {% for i in articles %}
-    {% if forloop.counter <= 3  %}
-        <div class="newscollector" >
-            <div class="flexitem" >
-               
-                      <div class="card rounded shadow-lg m-2" style="width: 20rem;">
-                          <img src="{{ i.urlToImage }}" class="card-img-top" alt="...">
-                          <div class="card-body" style ="background-color:#1b4446; color:#ffffff;">
-                            <small>Date: {{ i.publishedAt }}</small>
-                          <p class="card-text">By: {{ i.author }}</p>
-                          <h5 class="card-title">{{ i.title }}</h5>
-                          <p class="card-title">Source: {{ i.source.name }}</p>
-                          <p class="card-text" style ="text-align: left">{{ i.description }}</p>
-                          <hr>
-                          <a href="{{ i.url }}" target="_blank" class="btn btn-success m-1" style="background-color: #ffff;color:#1b4446; border:none">Read News</a>
-                          </div>
-              
-                      </div>                
-              
-        </div>
-        </div>
-    
-    {% endif %}
-    {% endfor %}
-    
-   
-  </section>
-
-  <!-- end news section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding" id="testimonial">
-    <div class="container">
-      <div class="col-md-11 col-lg-10 mx-auto">
-        <div class="heading_container heading_center" >
-          <h2>
-            Here is what our users have to say about us
-          </h2>
-        </div>
-        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="detail-box">
-                <h4>
-                  DroX
-                </h4>
-                <p>
-                  Before LIBYmax, I used to have such a hassle finding the ebook I was looking for but now I can find it easily.
-                </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h4>
-                  Happy
-                </h4>
-                <p>
-                  Could an application be more benificial ? 
-                </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h4>
-                  Ischyros Olethros
-                </h4>
-                <p>
-                  I am a student of the University of Athens and I was looking for a book that I wanted to read but couldnt find anywhere else but here.
-                </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev d-none" href="#customCarousel1" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <div class="footer_container">
-    <!-- info section -->
-    <section class="info_section ">
-      <div class="container">
-        <div class="contact_box">
-          <a href="">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="info_links">
-          <ul>
-            <li class="active">
-              <a href="">
-                Back To Top 
-              </a>
-            </li>
-            <li>
-              <a href="#aboutus">
-                About
-              </a>
-            </li>
-           
-            <li>
-              <a class="" href="#testimonial">
-                Testimonial
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="social_box">
-          <a href="">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
     </section>
-    <!-- end info_section -->
 
+    <!-- end client section -->
 
-    <!-- footer section -->
-    <footer class="footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="#">LIBYmax</a><br>
-          Project By: <a href="#">Computer Science For AI Cohort 1 Group 3 </a>
-        </p>
-      </div>
-    </footer>
-    <!-- footer section -->
+    <div class="footer_container">
+      <!-- info section -->
+      <section class="info_section">
+        <div class="container">
+          <div class="contact_box">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="info_links">
+            <ul>
+              <li class="active">
+                <a href=""> Back To Top </a>
+              </li>
+              <li>
+                <a href="#aboutus"> About </a>
+              </li>
 
-  </div>
-  <!-- jQery -->
-  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <!-- bootstrap js -->
-  <script src="{% static 'js/bootstrap.js' %}"></script>
-  <!-- slick  slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-  <!-- custom js -->
-  <script src="{% static 'js/custom.js' %}"></script>
+              <li>
+                <a class="" href="#testimonial"> Testimonial </a>
+              </li>
+            </ul>
+          </div>
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- end info_section -->
 
-  
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
+      <!-- footer section -->
+      <footer class="footer_section">
+        <div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="#">LIBYmax</a><br />
+            Project By:
+            <a href="#">Computer Science For AI Cohort 1 Group 3 </a>
+          </p>
+        </div>
+      </footer>
+      <!-- footer section -->
+    </div>
+    <!-- jQery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- slick  slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <!-- nice select -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+      integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
 
-
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+      defer
+      data-deferred="1"
+    ></script>
+  </body>
 </html>
