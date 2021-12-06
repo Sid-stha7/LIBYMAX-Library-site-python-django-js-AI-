@@ -63,6 +63,12 @@ def browse(request):
 #     return render(request, 'book.html')
 
 
+
+def book_detail(request , slug):
+    book = Book.objects.get(slug=slug)
+    return render(request, 'book.html', {'book': book})
+
+    
 def register(request):
     if request.method == 'POST':
         
