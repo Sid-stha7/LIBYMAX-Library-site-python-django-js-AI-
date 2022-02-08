@@ -1,4 +1,5 @@
 {%load static%}
+{%load string_modif%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -366,7 +367,7 @@
               class="card-body"
               style="background-color: #1b4446; color: #ffffff"
             >
-              <small>Date: {{ i.publishedAt }}</small>
+              <small>Date: {{ i.publishedAt | date_modif }}</small>
               <p class="card-text">By: {{ i.author }}</p>
               <h5 class="card-title">{{ i.title }}</h5>
               <p class="card-title">Source: {{ i.source.name }}</p>

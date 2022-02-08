@@ -13,7 +13,7 @@ def landing(request):
    
 
    #fetching of the news for the latest news section on landing page 
-    url  = f'https://newsapi.org/v2/everything?q={category}&from=2021-11-30&sortBy=popularity&apiKey={APIkey}'
+    url  = 'https://newsapi.org/v2/everything?q=Books&sortBy=popularity&apiKey=ec7a9cfa19bc4ed297992f8a2ed2c8a0'
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
